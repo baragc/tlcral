@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem "paperclip", "~> 4.3"
+gem "paperclip-dropbox", ">= 1.1.7"
+gem "figaro"
 
 group :production do
 	gem 'pg'

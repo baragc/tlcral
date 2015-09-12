@@ -1,4 +1,12 @@
 class Restaurant < ActiveRecord::Base
-	has_attached_file :image, style: {image: "200x", thumb: "100x100"}, default_url: "default.gif"
+	if Rails.env.developmant?
+		has_attached_file :image, style: {image: "200x", thumb: "100x100"}, default_url: "default.gif"
+	else
+		has_attached_file :image, style: {image: "200x", thumb: "100x100"}, default_url: "default.gif",
+		:storage => :dropbox,
+      	:dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+      	:path => "style/:id_:filename"
+	end
+
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end

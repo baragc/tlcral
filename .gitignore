@@ -15,9 +15,3 @@
 /log/*
 !/log/.keep
 /tmp
-
-# Ignore files uploaded on localhost
-/public/system
-
-# Ignore application configuration
-/config/application.yml

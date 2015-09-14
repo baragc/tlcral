@@ -14,9 +14,9 @@
         <p><%= restaurant.address %></p>
         <p><%= restaurant.phone %></p>
         <p><%= link_to restaurant.website, restaurant.website %></p>
-        <%= link_to 'Show', restaurant, class: "btn btn-link" %>
-        <%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %>
-        <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+        <li><%= link_to 'Show', restaurant, class: "btn btn-link" %></li>
+        <li><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></li>
+        <li><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></li>
       </div>
     </div>
   </div>
